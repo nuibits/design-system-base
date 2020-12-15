@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('default'        , 'layouts/base.njk');
   eleventyConfig.addLayoutAlias('dashboard'      , 'layouts/base-dashboard.njk');
   eleventyConfig.addLayoutAlias('authentication' , 'layouts/base-auth.njk');
+  eleventyConfig.addLayoutAlias('components'     , 'layouts/components.njk');
 
   // a debug utility
   eleventyConfig.addFilter('dump', obj => {
