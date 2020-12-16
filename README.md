@@ -1,61 +1,70 @@
-# [Eleventy Tailwind Starter](https://eleventy-tailwind-starter.appseed.us/)
+# ElevenTail
 
-Static Site prototyped on top of [Eleventy](https://www.11ty.io/) SSG and Tailwind CSS - [Live DEMO](https://eleventy-tailwind-starter.appseed.us)
+A project scaffold for quickly starting a site build with:
 
-- Design: [Tailwind Starter](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/) by [Creative-Tim](https://www.creative-tim.com)
-- [11ty](https://www.11ty.io/) SSG
-- [ElevenTail](https://github.com/philhawksworth/eleventail) - the initial starter
+- [Eleventy](https://11ty.dev) for templates and site generation
 - [Tailwindcss](https://tailwindcss.com) for a utility first CSS workflow
 - [PurgeCSS](https://www.purgecss.com/) for optimizing CSS output
 - [UglifyJS](https://www.npmjs.com/package/uglify-js) for a simple JS build pipeline
+- [Netlify CLI](https://www.npmjs.com/package/netlify-cli) for Netlify dev pipeline and local replication of prod environment
 
-<br />
 
-## Want more? Go PRO!
+![Deploy to Netlify](eleventail-screenshot.jpg)
 
-PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup))
 
-| [Eleventy Material Kit PRO](https://appseed.us/static-site/eleventy-material-kit-pro) | [Eleventy Paper Kit PRO](https://appseed.us/static-site/eleventy-paper-kit-pro) | [Eleventy Now UI Kit PRO](https://appseed.us/static-site/eleventy-now-ui-kit-pro) |
-| --- | --- | --- |
-| [![Eleventy Material Kit PRO](https://raw.githubusercontent.com/app-generator/static/master/products/eleventy-material-kit-pro-screen.png)](https://appseed.us/static-site/eleventy-material-kit-pro)  | [![Eleventy Paper Kit PRO](https://raw.githubusercontent.com/app-generator/static/master/products/eleventy-paper-kit-pro-screen.png)](https://appseed.us/static-site/eleventy-paper-kit-pro) | [![Eleventy Now UI Kit PRO](https://raw.githubusercontent.com/app-generator/static/master/products/eleventy-now-ui-kit-pro-screen.png)](https://appseed.us/static-site/eleventy-now-ui-kit-pro)
+## Example
 
-<br />
-<br />
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4151ca40-1788-4959-9367-38ad71d11492/deploy-status)](https://app.netlify.com/sites/eleventail/deploys)
 
-![Eleventy Tailwind Starter- Open-Source Static Site Starter.](https://raw.githubusercontent.com/app-generator/static/master/products/eleventy-tailwind-starter-screen.png)
+https://eleventail.netlify.com
 
-<br />
 
-## How to use it
+## Prerequisites
 
-- Build from sources:
+- [Node and NPM](https://nodejs.org/)
+- [Netlify CLI](https://www.npmjs.com/package/netlify-cli)
+
+
+## Running locally
 
 ```bash
-$ # Clone the sources
-$ git clone https://github.com/app-generator/eleventy-tailwind-starter.git
-$ cd eleventy-tailwind-starter
-$
-$ # Install the dependencies
-$ yarn 
-$
-$ # Star in development mode
-$ yarn start # with LIVE reload
-$
-$ # app is running on http://localhost:8181
-$
-$ # Production build
-$ yarn build #
-$ # HTML files are generated in dist folder
+
+# install Netlify CLI globally
+npm install netlify-cli -g
+
+# install the project dependencies
+npm install
+
+# run the build and server locally
+netlify dev
 ```
 
-<br />
 
-## Eleventy Tailwind Starter Links
+## Previewing the production build
 
-- [Eleventy Tailwind Starter](https://eleventy-tailwind-starter.appseed.us) - Live DEMO
-- [Tailwind Starter](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/) provided by Creative-Tim
+When building for production, an extra build step will strip out all CSS classes not used in the site. This step is not performed during the automatic rebuilds which take place during dev.
 
-<br />
+```bash
 
----
-[Eleventy Tailwind Starter](https://eleventy-tailwind-starter.appseed.us) - provided by **AppSeed**
+# run the production build
+npm run build
+```
+
+
+## Styling with TailwindCSS
+
+This site uses TailwindCSS to offer utility CSS classes and provide a rapid means to styling the site. This means that most styling can be done without writing any additional CSS. Instead, utility classes can be added directly to the HTML. This may not be to everyone's tastes, but it can provide some very rapid development and also offer surprising levels of familiarity for those used to working in this way (since the conventions and classes are not _per site_.)
+
+While running/developing locally, the `npm run start` command will recompile the site as files are saved and this includes the CSS pipeline from Tailwind.
+
+### Global CSS utilities.
+
+A small number of bespoke CSS rules are provided for efficiency of repeated or global classes. These reside in `src/site/_includes/css/tailwind.css`
+
+
+## Just clone and go
+
+You can also get started with your own copy of this site cloned to your GitHub account and deployed to [Netlify](http://netlify.com/?utm_source=github&utm_medium=eleventail-pnh&utm_campaign=devex) with a configured CI/CD pipeline and HTTPS by clicking the button below and following the instructions.
+
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/eleventail)
