@@ -1,16 +1,22 @@
 module.exports = {
+  darkMode: false,
   theme: {
-    extend: {}
+    container: {
+      center: true,
+      padding: '2rem',
+    },
+    extend: {},
   },
-  variants: {},
-  plugins: [],
-  purge: {
-    
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      'src/site/*.njk',
-      'src/site/_includes/layouts/*.njk',
-      'src/site/_includes/*.njk'
-    ]
-  }
+  variants: {
+    extend: {},
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwindcss-debug-screens'),
+  ],
+  purge: [
+    './src/**/*.js',
+    './src/**/*.njk',
+    './src/**/*.svg',
+  ],
 }
