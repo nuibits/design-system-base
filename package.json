@@ -1,7 +1,7 @@
 {
-  "name": "tea-stack",
+  "name": "nuibits-design-system",
   "version": "1.0.0",
-  "description": "A starter template for the TEA stack.",
+  "description": "collection of our components for use",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production npm-run-all clean -p build:*",
@@ -30,10 +30,7 @@
   ],
   "author": "Phillip Shields",
   "license": "MIT",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": "",
+ 
   "dependencies": {
     "alpinejs": "^2.8.0",
     "turbolinks": "^5.2.0"
